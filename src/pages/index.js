@@ -7,9 +7,9 @@ import SEO from "../components/seo"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" keywords={[`north`, `bits`, `portfolio`, "developer"]}/>
+    <SEO title="Home" keywords={[`north`, `bits`, `portfolio`, "developer"]} />
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image/>
+      <Image />
       <ul>
         {data.allProjectsJson.edges.map(({ node: { id, name, site } }) => (
           <li key={id}>
@@ -21,17 +21,18 @@ const IndexPage = ({ data }) => (
   </Layout>
 )
 
-export const query = graphql`query {
-  allProjectsJson {
-    edges {
-      node {
-        id
-        name
-        site
+export const query = graphql`
+  query {
+    allProjectsJson {
+      edges {
+        node {
+          id
+          name
+          site
+        }
       }
     }
   }
-}`
-
+`
 
 export default IndexPage

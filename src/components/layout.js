@@ -11,7 +11,7 @@ const Layout = ({ children }) => (
     query={query}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title}/>
+        <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
             margin: `0 auto`,
@@ -43,20 +43,22 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-const query = graphql`query {
-  allSitePage {
-    edges {
-      node {
-        id
-        path
+const query = graphql`
+  query {
+    allSitePage {
+      edges {
+        node {
+          id
+          path
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }
-  site {
-    siteMetadata {
-      title
-    }
-  }
-}`;
+`
 
 export default Layout
