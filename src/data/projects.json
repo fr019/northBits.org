@@ -1,0 +1,18 @@
+[
+  {
+    "name": "1 site",
+    "site": "http://www.first.com"
+  },
+  {
+    "name": "2 site",
+    "site": "http://www.second.com"
+  },
+  {
+    "name": "3 site",
+    "site": "http://www.first.com"
+  },
+  {
+    "name": "4 site",
+    "site": "http://www.second.com"
+  }
+]

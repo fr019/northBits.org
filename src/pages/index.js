@@ -1,21 +1,37 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <SEO title="Home" keywords={[`north`, `bits`, `portfolio`, "developer"]}/>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+      <Image/>
+      <ul>
+        {data.allProjectsJson.edges.map(({ node: { id, name, site } }) => (
+          <li key={id}>
+            <a href={site}>{name}</a>
+          </li>
+        ))}
+      </ul>
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
+
+export const query = graphql`query {
+  allProjectsJson {
+    edges {
+      node {
+        id
+        name
+        site
+      }
+    }
+  }
+}`
+
 
 export default IndexPage
