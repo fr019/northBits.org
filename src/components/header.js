@@ -1,14 +1,20 @@
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { graphql, Link, useStaticQuery, navigate } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
 const langHandler = (e) => {
   e.preventDefault()
-  window.history.pushState('page2', 'Title', '/' + e.target.dataset.lang);
-  console.log('click', e.target.dataset.lang);
+
+
+  // change current url
+  let url = window.location.pathname.split("/", 3)
+  url[1] = e.target.dataset.lang
+  navigate(url.join("/"))
 }
 
-const Header = (e) => {
+const Header = () => {
+  const currentLang = window.location.pathname.split("/", 3)[1]
+  console.log("currentLang", currentLang)
   const data = useStaticQuery(graphql`
     query {
      allUrlsJson {
@@ -17,6 +23,7 @@ const Header = (e) => {
             id
             name
             path
+            lang
           }
         }
       }
@@ -32,13 +39,15 @@ const Header = (e) => {
       <div className={"container"}>
         <nav>
           <ul className={"nav-menu"}>
-            {data.allUrlsJson.edges.map(({ node: { id, name, path } }) => (
-              <li key={id}>
-                <Link className={"nav-menu__item"}
-                      to={path}
-                      activeClassName="active">{name}</Link>
-              </li>
-            ))}
+            {data.allUrlsJson.edges
+              .filter((el) => el.node.lang === currentLang)
+              .map(({ node: { id, name, path } }) => (
+                <li key={id}>
+                  <Link className={"nav-menu__item"}
+                        to={path}
+                        activeClassName="active">{name}</Link>
+                </li>
+              ))}
           </ul>
           <ul className={"nav-menu lang"}>
             <li key={"eng"}>
