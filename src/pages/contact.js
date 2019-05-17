@@ -6,7 +6,10 @@ import SEO from "../components/seo"
 
 const ContactPage = () => (
   <Layout>
-    <SEO title="Contact" keywords={[`north`, `bits`, `portfolio`, "developer"]}/>
+    <SEO
+      title="Contact"
+      keywords={[`north`, `bits`, `portfolio`, "developer"]}
+    />
     <div className={"container"}>
       <h1>Hi from the ContactPage ENG</h1>
       <p>Welcome to ContactPage</p>

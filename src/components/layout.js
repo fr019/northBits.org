@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import PageTransition from 'gatsby-plugin-page-transitions'
 
 import "../styles/layout.sass"
 
@@ -7,11 +8,13 @@ import Header from "./header"
 import Footer from "./footer"
 
 const Layout = ({ children }) => {
-  return [
-    <Header key={"1"} />,
-    <main key={"2"}>{children}</main>,
-    <Footer key={"3"} />,
-  ]
+  return (
+    <PageTransition>
+      <Header />
+      <main >{children}</main>
+      <Footer />
+    </PageTransition>
+  )
 }
 
 Layout.propTypes = {

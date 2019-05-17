@@ -1,9 +1,7 @@
+const siteMetadata = require('./src/data/siteMetadata');
+
 module.exports = {
-  siteMetadata: {
-    title: `My portfolio`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@fr019`,
-  },
+  siteMetadata,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-json`,
@@ -25,13 +23,38 @@ module.exports = {
     {
       resolve: "gatsby-plugin-i18n",
       options: {
-        langKeyDefault: "en",
-        useLangKeyLayout: false,
+        langKeyForNull: 'en',
+        langKeyDefault: 'en',
+        useLangKeyLayout: true,
+        prefixDefault: false,
+        // markdownRemark: {
+        //   projectPage: 'src/pages/projects/index.js',
+        //   query: `
+        //     {
+        //         allMarkdownRemark {
+        //             edges {
+        //               node {
+        //                   fields {
+        //                   slug,
+        //                   langKey
+        //                   }
+        //               }
+        //             }
+        //         }
+        //     }
+        //   `
+        // }
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
+    {
+      resolve: 'gatsby-plugin-page-transitions',
+      options: {
+        transitionTime: 500
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

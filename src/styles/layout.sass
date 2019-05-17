@@ -4,15 +4,22 @@
 @import "components/header"
 @import "components/footer"
 
-#___gatsby > div
+#___gatsby > div > div
   min-height: 100vh
   display: flex
   flex-direction: column
 
 .container
+  display: flex
+  padding: 0 1rem
+  width: 100%
   max-width: 960px
   margin: 0 auto
-  padding: 1rem
 
-
-
+.link-icon
+  display: flex
+  height: 1.3rem
+  img
+    margin: 0 .5rem
+    width: 1.3rem
+    height: 100%

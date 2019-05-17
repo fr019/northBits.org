@@ -1,16 +1,7 @@
-import { graphql, Link, useStaticQuery, navigate } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import { globalHistory } from "@reach/router"
 import PropTypes from "prop-types"
 import React from "react"
-
-const langHandler = e => {
-  e.preventDefault()
-  console.log("click")
-  // change current url
-  let url = globalHistory.location.pathname.split("/")
-  if (e.target.dataset.lang !== "en") url[1] = e.target.dataset.lang
-  navigate(url.join("/"))
-}
 
 const Header = () => {
   let currentLang = "en"
@@ -27,11 +18,6 @@ const Header = () => {
             path
             lang
           }
-        }
-      }
-      site {
-        siteMetadata {
-          title
         }
       }
     }
@@ -54,28 +40,6 @@ const Header = () => {
                   </Link>
                 </li>
               ))}
-          </ul>
-          <ul className={"nav-menu lang"}>
-            <li key={"eng"}>
-              <Link
-                to={"/"}
-                className={"nav-menu__item"}
-                onClick={e => langHandler(e)}
-                data-lang={"en"}
-              >
-                Eng
-              </Link>
-            </li>
-            <li key={"heb"}>
-              <Link
-                to={"/he/"}
-                className={"nav-menu__item"}
-                onClick={e => langHandler(e)}
-                data-lang={"he"}
-              >
-                He
-              </Link>
-            </li>
           </ul>
         </nav>
       </div>

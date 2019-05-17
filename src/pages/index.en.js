@@ -31,14 +31,16 @@ const IndexPage = () => {
         <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
           <Image />
           <ul>
-            {data.allProjectsJson.edges.map(({ node: { id, name, slug, site } }) => (
-              <li key={id}>
-                <Link to={"/projects" + slug}>
-                  {name}
-                  <a href={site}>site</a>
-                </Link>
-              </li>
-            ))}
+            {data.allProjectsJson.edges.map(
+              ({ node: { id, name, slug, site } }) => (
+                <li key={id}>
+                  <Link to={"/projects" + slug}>
+                    {name}
+                    {/*<a href={site}>site</a>*/}
+                  </Link>
+                </li>
+              )
+            )}
           </ul>
         </div>
       </div>

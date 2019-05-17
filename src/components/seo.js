@@ -18,7 +18,14 @@ function SEO({ description, lang, meta, keywords, title }) {
           siteMetadata {
             title
             description
-            author
+            author {
+                name
+                bio
+                homeCity
+                email
+                twitter
+                defaultLink
+            }
           }
         }
       }
@@ -33,7 +40,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s ${site.siteMetadata.title.length ? " | " + site.siteMetadata.title: ""}`}
       meta={[
         {
           name: `description`,
