@@ -1,1 +1,1 @@
-{"data":{"allUrlsJson":{"edges":[{"node":{"name":"Home","path":"/"}},{"node":{"name":"page-2","path":"/page-2"}}]},"site":{"siteMetadata":{"title":"My portfolio"}}}}
+{"data":{"allUrlsJson":{"edges":[{"node":{"name":"Home","path":"/en/"}},{"node":{"name":"About","path":"/en/about"}},{"node":{"name":"Contact","path":"/en/contact"}},{"node":{"name":"Home","path":"/he/"}},{"node":{"name":"About","path":"/he/about"}},{"node":{"name":"קשר","path":"/he/contact"}}]},"site":{"siteMetadata":{"title":"My portfolio"}}}}
