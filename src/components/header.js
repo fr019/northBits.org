@@ -4,7 +4,8 @@ import React from "react"
 
 const langHandler = (e) => {
   e.preventDefault()
-  console.log('click');
+  window.history.pushState('page2', 'Title', '/' + e.target.dataset.lang);
+  console.log('click', e.target.dataset.lang);
 }
 
 const Header = (e) => {
@@ -13,6 +14,7 @@ const Header = (e) => {
      allUrlsJson {
         edges {
           node {
+            id
             name
             path
           }
@@ -39,16 +41,18 @@ const Header = (e) => {
             ))}
           </ul>
           <ul className={"nav-menu lang"}>
-            {/*<li>*/}
-            {/*  <a href=""*/}
-            {/*     onClick={e => langHandler}*/}
-            {/*     className={"nav-menu__item"}>En</a>*/}
-            {/*</li>*/}
-            {/*<li>*/}
-            {/*  <a href=""*/}
-            {/*     onClick={e => langHandler}*/}
-            {/*     className={"nav-menu__item"}>He</a>*/}
-            {/*</li>*/}
+            <li key={"eng"}>
+              <a href=""
+                 data-lang={"en"}
+                 onClick={e => langHandler(e)}
+                 className={"nav-menu__item"}>En</a>
+            </li>
+            <li key={"heb"}>
+              <a href=""
+                 data-lang={"he"}
+                 onClick={e => langHandler(e)}
+                 className={"nav-menu__item"}>He</a>
+            </li>
           </ul>
         </nav>
       </div>
