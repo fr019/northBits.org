@@ -8,11 +8,9 @@ import Footer from "./footer"
 
 const Layout = ({ children }) => {
   return [
-    <Header key={"1"}/>,
-    <main key={"2"}>
-      {children}
-    </main>,
-    <Footer key={"3"}/>,
+    <Header key={"1"} />,
+    <main key={"2"}>{children}</main>,
+    <Footer key={"3"} />,
   ]
 }
 

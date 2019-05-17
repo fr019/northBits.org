@@ -1,23 +1,25 @@
 import { graphql, Link, useStaticQuery, navigate } from "gatsby"
+import { globalHistory } from "@reach/router"
 import PropTypes from "prop-types"
 import React from "react"
 
-const langHandler = (e) => {
+const langHandler = e => {
   e.preventDefault()
-
-
+  console.log("click")
   // change current url
-  let url = window.location.pathname.split("/", 3)
-  url[1] = e.target.dataset.lang
+  let url = globalHistory.location.pathname.split("/")
+  if (e.target.dataset.lang !== "en") url[1] = e.target.dataset.lang
   navigate(url.join("/"))
 }
 
 const Header = () => {
-  const currentLang = window.location.pathname.split("/", 3)[1]
-  console.log("currentLang", currentLang)
+  let currentLang = "en"
+  if (globalHistory.location.pathname.split("/", 3)[1].includes("he"))
+    currentLang = "he"
+
   const data = useStaticQuery(graphql`
     query {
-     allUrlsJson {
+      allUrlsJson {
         edges {
           node {
             id
@@ -40,27 +42,39 @@ const Header = () => {
         <nav>
           <ul className={"nav-menu"}>
             {data.allUrlsJson.edges
-              .filter((el) => el.node.lang === currentLang)
+              .filter(el => el.node.lang === currentLang)
               .map(({ node: { id, name, path } }) => (
                 <li key={id}>
-                  <Link className={"nav-menu__item"}
-                        to={path}
-                        activeClassName="active">{name}</Link>
+                  <Link
+                    className={"nav-menu__item"}
+                    to={path}
+                    activeClassName="active"
+                  >
+                    {name}
+                  </Link>
                 </li>
               ))}
           </ul>
           <ul className={"nav-menu lang"}>
             <li key={"eng"}>
-              <a href=""
-                 data-lang={"en"}
-                 onClick={e => langHandler(e)}
-                 className={"nav-menu__item"}>En</a>
+              <Link
+                to={"/"}
+                className={"nav-menu__item"}
+                onClick={e => langHandler(e)}
+                data-lang={"en"}
+              >
+                Eng
+              </Link>
             </li>
             <li key={"heb"}>
-              <a href=""
-                 data-lang={"he"}
-                 onClick={e => langHandler(e)}
-                 className={"nav-menu__item"}>He</a>
+              <Link
+                to={"/he/"}
+                className={"nav-menu__item"}
+                onClick={e => langHandler(e)}
+                data-lang={"he"}
+              >
+                He
+              </Link>
             </li>
           </ul>
         </nav>
