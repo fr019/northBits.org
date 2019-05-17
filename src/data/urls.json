@@ -1,10 +1,32 @@
 [
   {
     "name": "Home",
-    "path": "/"
+    "path": "/en/",
+    "lang": "en"
   },
   {
-    "name": "page-2",
-    "path": "/page-2"
+    "name": "About",
+    "path": "/en/about",
+    "lang": "en"
+  },
+  {
+    "name": "Contact",
+    "path": "/en/contact",
+    "lang": "en"
+  },
+  {
+    "name": "Home",
+    "path": "/he/",
+    "lang": "he"
+  },
+  {
+    "name": "About",
+    "path": "/he/about",
+    "lang": "he"
+  },
+  {
+    "name": "קשר",
+    "path": "/he/contact",
+    "lang": "he"
   }
 ]

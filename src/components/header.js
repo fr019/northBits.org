@@ -2,7 +2,12 @@ import { graphql, Link, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => {
+const langHandler = (e) => {
+  e.preventDefault()
+  console.log('click');
+}
+
+const Header = (e) => {
   const data = useStaticQuery(graphql`
     query {
      allUrlsJson {
@@ -21,21 +26,31 @@ const Header = ({ siteTitle }) => {
     }
   `)
   return (
-    <header style={{ background: "white" }}>
+    <header>
       <div className={"container"}>
-        <h1 style={{ margin: 0 }}>
-          <Link to="/" style={{ textDecoration: `none` }}>
-            {/*{siteTitle}*/}
-          </Link>
-        </h1>
-
-        <ul>
-          {data.allUrlsJson.edges.map(({ node: { id, name, path } }) => (
-            <li key={id}>
-              <Link to={path}>{name}</Link>
-            </li>
-          ))}
-        </ul>
+        <nav>
+          <ul className={"nav-menu"}>
+            {data.allUrlsJson.edges.map(({ node: { id, name, path } }) => (
+              <li key={id}>
+                <Link className={"nav-menu__item"}
+                      to={path}
+                      activeClassName="active">{name}</Link>
+              </li>
+            ))}
+          </ul>
+          <ul className={"nav-menu lang"}>
+            {/*<li>*/}
+            {/*  <a href=""*/}
+            {/*     onClick={e => langHandler}*/}
+            {/*     className={"nav-menu__item"}>En</a>*/}
+            {/*</li>*/}
+            {/*<li>*/}
+            {/*  <a href=""*/}
+            {/*     onClick={e => langHandler}*/}
+            {/*     className={"nav-menu__item"}>He</a>*/}
+            {/*</li>*/}
+          </ul>
+        </nav>
       </div>
     </header>
   )
