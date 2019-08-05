@@ -10,7 +10,7 @@ const ContactPage = () => (
       title="Contact"
       keywords={[`north`, `bits`, `portfolio`, "developer"]}
     />
-    <div id={"contacts"}>
+    <div id={"contacts"} className={"page"}>
       <h1>Hi from the ContactPage ENG</h1>
       <p>Welcome to ContactPage</p>
       <Link to="/">Go back to the homepage</Link>

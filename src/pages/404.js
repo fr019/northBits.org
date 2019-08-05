@@ -9,8 +9,10 @@ const NotFoundPage = () => (
       title="404: Not found"
       keywords={[`north`, `bits`, `portfolio`, "developer"]}
     />
-    <h1>NOT FOUND EN</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <div id={"error"} className={"page"}>
+      <h1>NOT FOUND EN</h1>
+      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    </div>
   </Layout>
 )
 

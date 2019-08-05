@@ -20,41 +20,35 @@ module.exports = {
         path: `${__dirname}/src/data`,
       },
     },
-    {
-      resolve: "gatsby-plugin-i18n",
-      options: {
-        langKeyForNull: 'en',
-        langKeyDefault: 'en',
-        useLangKeyLayout: true,
-        prefixDefault: false,
-        // markdownRemark: {
-        //   projectPage: 'src/pages/projects/index.js',
-        //   query: `
-        //     {
-        //         allMarkdownRemark {
-        //             edges {
-        //               node {
-        //                   fields {
-        //                   slug,
-        //                   langKey
-        //                   }
-        //               }
-        //             }
-        //         }
-        //     }
-        //   `
-        // }
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-i18n",
+    //   options: {
+    //     langKeyForNull: 'en',
+    //     langKeyDefault: 'en',
+    //     useLangKeyLayout: true,
+    //     prefixDefault: false,
+    //     // markdownRemark: {
+    //     //   projectPage: 'src/pages/projects/index.js',
+    //     //   query: `
+    //     //     {
+    //     //         allMarkdownRemark {
+    //     //             edges {
+    //     //               node {
+    //     //                   fields {
+    //     //                   slug,
+    //     //                   langKey
+    //     //                   }
+    //     //               }
+    //     //             }
+    //     //         }
+    //     //     }
+    //     //   `
+    //     // }
+    //   },
+    // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
-    {
-      resolve: 'gatsby-plugin-page-transitions',
-      options: {
-        transitionTime: 500
-      }
-    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

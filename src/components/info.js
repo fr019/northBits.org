@@ -1,7 +1,7 @@
 import React from "react"
 import Image from "./image"
 
-const Info = ({autor}) => (
+const Info = ({author}) => (
 
   <div className={"information"}>
     <h1 className={"title"}>Graphic Designer & Front-End Developer</h1>

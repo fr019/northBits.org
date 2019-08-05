@@ -1,7 +1,7 @@
 const languages = require('./languages');
 
 module.exports = {
-  siteUrl: 'https://www.northBits.org',
+  siteUrl: 'https://northBits.org',
   title: 'Vakera Andriyanov',
   description: 'Middle software engineer. React, and Node.js developer from Haifa.',
   author: {
@@ -18,7 +18,7 @@ module.exports = {
     {label: 'home', slug: '/'},
     {label: 'projects', slug: '/projects/'},
     {label: 'about', slug: '/about/'},
-    {label: 'contact', slug: '/contact/'}
+    {label: 'contacts', slug: '/contacts/'}
   ],
   languages,
   contact: [

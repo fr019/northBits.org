@@ -24,8 +24,8 @@ const AboutPage = () => {
 
   return (<Layout>
     <SEO title="About" keywords={[`north`, `bits`, `portfolio`, "developer"]}/>
-    <div id={"about"}>
-      <Info autor={"autor"}/>
+    <div id={"about"} className={"page"}>
+      <Info author={"author"}/>
       <Projects projects={data.allProjectsJson.edges}/>
       <Link to="/">Go back to the homepage</Link>
     </div>

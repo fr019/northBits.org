@@ -3,3 +3,9 @@ html
     font-family: Roboto, sans-serif
     font-size: $font-size
     color: $font-color
+
+a
+    color: $light
+    @include transition
+    &:hover
+        color: $very-light

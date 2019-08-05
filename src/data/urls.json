@@ -10,23 +10,8 @@
     "lang": "en"
   },
   {
-    "name": "Contact",
-    "path": "/contact/",
+    "name": "Contacts",
+    "path": "/contacts/",
     "lang": "en"
-  },
-  {
-    "name": "Home",
-    "path": "/he/",
-    "lang": "he"
-  },
-  {
-    "name": "About",
-    "path": "/he/about/",
-    "lang": "he"
-  },
-  {
-    "name": "קשר",
-    "path": "/he/contact/",
-    "lang": "he"
   }
 ]
