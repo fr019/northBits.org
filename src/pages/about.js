@@ -1,18 +1,35 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Info from "../components/info"
+import Projects from "../components/projects"
 
-const AboutPage = () => (
-  <Layout>
-    <SEO title="About" keywords={[`north`, `bits`, `portfolio`, "developer"]} />
-    <div className={"container"}>
-      <h1>Hi from the AboutPage ENG</h1>
-      <p>Welcome to AboutPage</p>
+const AboutPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allProjectsJson {
+        edges {
+          node {
+            id
+            name
+            slug
+            site
+          }
+        }
+      }
+    }
+  `)
+
+  return (<Layout>
+    <SEO title="About" keywords={[`north`, `bits`, `portfolio`, "developer"]}/>
+    <div id={"about"}>
+      <Info autor={"autor"}/>
+      <Projects projects={data.allProjectsJson.edges}/>
       <Link to="/">Go back to the homepage</Link>
     </div>
-  </Layout>
-)
+  </Layout>)
+}
 
 export default AboutPage

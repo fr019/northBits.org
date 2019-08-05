@@ -1,25 +1,43 @@
 @import "includes/reset"
 @import "includes/variables"
+@import "includes/typography"
 
 @import "components/header"
 @import "components/footer"
 
+html
+    box-sizing: border-box
+
+*, *:after, *:before
+    box-sizing: inherit
+
+#___gatsby
+    background: $very-dark
+
 #___gatsby > div > div
-  min-height: 100vh
-  display: flex
-  flex-direction: column
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+
+main
+    flex: 1
 
 .container
-  display: flex
-  padding: 0 1rem
-  width: 100%
-  max-width: 960px
-  margin: 0 auto
+    display: flex
+    flex-wrap: wrap
+    padding: 0 1rem
+    height: 100%
+    width: 100%
+    max-width: 960px
+    margin: 0 auto
+
+.page
+    flex: 1
 
 .link-icon
-  display: flex
-  height: 1.3rem
-  img
-    margin: 0 .5rem
-    width: 1.3rem
-    height: 100%
+    display: flex
+    height: 1.3rem
+    img
+        margin: 0 .5rem
+        width: 1.3rem
+        height: 100%

@@ -6,12 +6,18 @@ import "../styles/layout.sass"
 
 import Header from "./header"
 import Footer from "./footer"
+import Nav from "./nav"
 
 const Layout = ({ children }) => {
   return (
     <PageTransition>
       <Header />
-      <main >{children}</main>
+      <main>
+        <div className="container">
+          <Nav/>
+          {children}
+        </div>
+      </main>
       <Footer />
     </PageTransition>
   )

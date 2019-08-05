@@ -30,7 +30,7 @@ module.exports = {
     {
       type: 'phone',
       value: '+972 53 9020563',
-      country: 'he',
+      country: 'ISR',
       link: 'tel:+972 53 9020563'
     }
   ]
