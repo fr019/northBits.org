@@ -8,7 +8,6 @@ const Header = () => {
     <header>
       <div className={"container"}>
         <div className="logo">
-          NorthBits
         </div>
       </div>
     </header>

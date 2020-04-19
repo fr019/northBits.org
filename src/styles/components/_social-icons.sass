@@ -1,0 +1,17 @@
+@import "../includes/variables"
+@import "../includes/mixins"
+
+.social-icons
+    display: flex
+    li
+        margin: 0 1rem
+        height: 2rem
+        width: 2rem
+        &:hover
+            a .cls-1, .cls-2
+                fill: $dark
+        a .cls-1, .cls-2
+            fill: $gray
+            @include transition
+
+

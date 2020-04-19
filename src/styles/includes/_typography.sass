@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap')
 
 html
     font-family: Roboto, sans-serif
@@ -5,7 +6,25 @@ html
     color: $font-color
 
 a
-    color: $light
+    color: $very-dark
+    font-family: 'Roboto Mono', monospace
+    text-decoration: none
     @include transition
     &:hover
-        color: $very-light
+        color: $dark
+
+p, div, span
+    font-family: 'Roboto', sans-serif
+
+h1
+    color: $gray
+    font-size: 2rem
+    text-align: center
+    font-family: 'Roboto Mono', monospace
+
+h2
+    color: $light-gray
+    font-size: 1.3rem
+    text-align: center
+    margin: 1rem 0 4rem
+    font-family: 'Roboto Mono', monospace
