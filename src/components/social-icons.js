@@ -21,10 +21,10 @@ const SocialIcons = () => {
   const icons = [
     { name: "phone", href: "tel:+972539020563" },
     { name: "mail", href: "mailto:mprint85@gmail.com" },
-    { name: "linkedin", href: "mailto:mprint85@gmail.com" },
-    { name: "github", href: "mailto:mprint85@gmail.com" },
-    { name: "facebook", href: "mailto:mprint85@gmail.com" },
-    { name: "behance", href: "mailto:mprint85@gmail.com" },
+    { name: "linkedin", href: "https://www.linkedin.com/in/valera-andriyanov/" },
+    { name: "github", href: "https://github.com/fr019/" },
+    { name: "facebook", href: "https://www.facebook.com/NorthBits" },
+    { name: "behance", href: "https://www.behance.net/valeraandriya" },
   ]
 
   console.log(data)
