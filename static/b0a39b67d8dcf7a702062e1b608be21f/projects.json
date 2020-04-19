@@ -1,0 +1,22 @@
+[
+  {
+    "name": "1 site",
+    "slug": "/1/",
+    "site": "http://www.first.com"
+  },
+  {
+    "name": "2 site",
+    "slug": "/2/",
+    "site": "http://www.second.com"
+  },
+  {
+    "name": "3 site",
+    "slug": "/3/",
+    "site": "http://www.first.com"
+  },
+  {
+    "name": "4 site",
+    "slug": "/4/",
+    "site": "http://www.second.com"
+  }
+]

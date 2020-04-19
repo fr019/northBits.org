@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{w2l6:function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),r=a.n(n),l=a("Bl7J"),o=a("vrFN");t.default=function(){return r.a.createElement(l.a,null,r.a.createElement(o.a,{title:"404: Not found",keywords:["north","bits","portfolio","developer"]}),r.a.createElement("div",{id:"error",className:"page"},r.a.createElement("h1",null,"NOT FOUND EN"),r.a.createElement("p",null,"You just hit a route that doesn't exist... the sadness.")))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-54abc5b9c63e067286ba.js.map

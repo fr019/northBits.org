@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Home",
+    "path": "/",
+    "lang": "en"
+  },
+  {
+    "name": "About",
+    "path": "/about/",
+    "lang": "en"
+  },
+  {
+    "name": "Contact",
+    "path": "/contact/",
+    "lang": "en"
+  },
+  {
+    "name": "Home",
+    "path": "/he/",
+    "lang": "he"
+  },
+  {
+    "name": "About",
+    "path": "/he/about/",
+    "lang": "he"
+  },
+  {
+    "name": "קשר",
+    "path": "/he/contact/",
+    "lang": "he"
+  }
+]

@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{VGXW:function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),r=n.n(a),l=n("Bl7J"),o=n("vrFN");t.default=function(){return r.a.createElement(l.a,null,r.a.createElement(o.a,{title:"One project",keywords:["north","bits","portfolio","developer"]}),r.a.createElement("div",{className:"container"},r.a.createElement("h1",null,"One")))}}}]);
+//# sourceMappingURL=component---src-pages-projects-1-js-ccb997366e10489dfda1.js.map
