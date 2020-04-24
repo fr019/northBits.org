@@ -27,7 +27,6 @@ const SocialIcons = () => {
     { name: "behance", href: "https://www.behance.net/valeraandriya" },
   ]
 
-  console.log(data)
   return (
     <nav>
       <ul className={"social-icons"}>

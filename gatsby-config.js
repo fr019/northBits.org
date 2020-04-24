@@ -20,32 +20,12 @@ module.exports = {
         path: `${__dirname}/src/data`,
       },
     },
-    // {
-    //   resolve: "gatsby-plugin-i18n",
-    //   options: {
-    //     langKeyForNull: 'en',
-    //     langKeyDefault: 'en',
-    //     useLangKeyLayout: true,
-    //     prefixDefault: false,
-    //     // markdownRemark: {
-    //     //   projectPage: 'src/pages/projects/index.js',
-    //     //   query: `
-    //     //     {
-    //     //         allMarkdownRemark {
-    //     //             edges {
-    //     //               node {
-    //     //                   fields {
-    //     //                   slug,
-    //     //                   langKey
-    //     //                   }
-    //     //               }
-    //     //             }
-    //     //         }
-    //     //     }
-    //     //   `
-    //     // }
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-153810629-1",
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
