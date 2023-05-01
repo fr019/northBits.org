@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Valera Andriyanov <mprint85@gmail.com>",
   "dependencies": {
-    "gatsby": "^2.20.25",
+    "gatsby": "^5.9.0",
     "gatsby-image": "^2.3.4",
     "gatsby-plugin-google-analytics": "^2.2.4",
     "gatsby-plugin-i18n": "^1.0.1",
@@ -13,7 +13,7 @@
     "gatsby-plugin-offline": "^3.1.4",
     "gatsby-plugin-react-helmet": "^3.2.4",
     "gatsby-plugin-sass": "^2.2.3",
-    "gatsby-plugin-sharp": "^2.5.6",
+    "gatsby-plugin-sharp": "^2.14.4",
     "gatsby-source-filesystem": "^2.2.4",
     "gatsby-transformer-json": "^2.3.3",
     "gatsby-transformer-sharp": "^2.4.6",
